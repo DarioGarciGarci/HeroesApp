@@ -83,6 +83,13 @@
         
             <span class="spacer"></span>
 
+            <button mat-raised-button 
+                    *ngIf="heroe.id"
+                    color="warn"
+                    (click)="borrar()">
+                <mat-icon>delete</mat-icon>
+                Borrar
+            </button>
            
         </div>
 
