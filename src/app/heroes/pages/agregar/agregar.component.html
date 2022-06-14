@@ -1,4 +1,4 @@
-<h1>Héroe nuevo <small>Pepe</small></h1>
+<h1>Héroe nuevo: <small>{{ heroe.superhero }}</small></h1>
 <div
     fxLayout="row"
     fxLayoutGap="40px"
@@ -17,6 +17,7 @@
                 <input
                     matInput 
                     type="text"
+                    [(ngModel)]="heroe.superhero"
                     required>
             </mat-form-field>
             <mat-form-field
@@ -25,6 +26,7 @@
                 <input
                     matInput 
                     type="text"
+                    [(ngModel)]="heroe.alter_ego"
                     required>
             </mat-form-field>            
         </div>
@@ -34,6 +36,7 @@
             <input
                 matInput 
                 type="text"
+                [(ngModel)]="heroe.first_appearance"
                 required>
         </mat-form-field>  
         <mat-form-field
@@ -42,15 +45,18 @@
             <input
                 matInput 
                 type="text"
+                [(ngModel)]="heroe.characters"
                 required>
         </mat-form-field>
         <mat-form-field
             fxFlex="100">
             <mat-label>Creador</mat-label>
-            <mat-select required="">
+            <mat-select
+                [(ngModel)]="heroe.publisher"
+                required="">
                 <mat-option
-            *ngFor="let creador of creadores" 
-            [value]="creador.id">
+                    *ngFor="let creador of creadores" 
+                    [value]="creador.id">
                     {{ creador.id }}
                 </mat-option>
             </mat-select>
@@ -61,14 +67,16 @@
             <input
                 matInput 
                 type="url"
+                [(ngModel)]="heroe.alt_img"
                 required>
         </mat-form-field>         
     
         <button
             mat-raised-button
-            color="primary">
+            color="primary"
+            (click)="guardar()">
             <mat-icon>edit</mat-icon>
-            Añadir
+            Guardar
         </button>
     </div>
     <div

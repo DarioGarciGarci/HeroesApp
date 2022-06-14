@@ -14,7 +14,7 @@ export class BuscarComponent implements OnInit {
   heroes: Heroe[] = [];
   heroeSeleccionado: Heroe | undefined;
  
-  constructor( private heroesService: HeroesService) { }
+  constructor(private heroesService: HeroesService) { }
 
   ngOnInit(): void {
   }
