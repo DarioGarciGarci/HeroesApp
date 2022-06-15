@@ -6,8 +6,7 @@ import { Heroe } from '../interfaces/heroes.interface';
 })
 export class ImagenPipe implements PipeTransform {
 
-//https://i.pinimg.com/736x/fa/c0/43/fac04382be00644bcdb7282ea127de09.jpg
-//https://cloudfront-us-east-1.images.arcpublishing.com/infobae/NLXD7LVC7BDA3OFMVY4Z6HYJBU.jpg
+//https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2022/02/5-ocasiones-en-las-que-la-Bruja-Escarlata-se-transformo-n-una-villana-en-os-comi-de-arvel.jpg?resize=1280%2C1524&quality=80&ssl=1
 //https://i.pinimg.com/originals/10/3f/11/103f119f037c88f308cbed5e452e5fdf.jpg
 
   transform(heroe: Heroe): string {
