@@ -19,6 +19,7 @@ export class HomeComponent {
     private authService: AuthService) { }
 
   logout(){
+    this.authService.logout();
     this.router.navigate(['./auth']);
   }
 
